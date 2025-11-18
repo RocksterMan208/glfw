@@ -1,13 +1,13 @@
 // definitions
 
 #include "glad/glad.h"
+#include "../include/shader.hpp"
 
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
-
 
 // main program
 
@@ -17,6 +17,7 @@ int main(){
     }
 
     // window create
+
     GLFWwindow* window = glfwCreateWindow(800, 600, "First Window", NULL, NULL); // Creating the environment
     if (!window){
         std::cout << "Creation of the window has failed." << std::endl; // Weird ahh print statement
@@ -34,6 +35,11 @@ int main(){
         glfwTerminate();
         return -1;
     }
+
+    GLuint shader = createShaderProgram(
+    "../shaders/vertex_shader.glsl",
+    "../shaders/fragment_shader.glsl"
+    );
 
     glClearColor(0.0f, 0.5f, 0.5f, 1.0f);
 
