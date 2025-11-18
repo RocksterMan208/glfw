@@ -1,0 +1,12 @@
+build/
+*.o
+*.out
+*.exe
+*.swp
+*.log
+
+# Prevent CMake build junk
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
