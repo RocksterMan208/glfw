@@ -10,5 +10,5 @@
 #include <glm/glm.hpp>
 
 std::string loadShaderSource(const char* filepath);
-unsigned int compileShader(GLenum type, const char* source);
+GLuint compileShader(GLenum type, const char* source);
 unsigned int createShaderProgram(const char* vertPath, const char* fragPath);

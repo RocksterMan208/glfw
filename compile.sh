@@ -1,4 +1,4 @@
 echo "Now compiling..."
 cd build
-cmake --build . --target run
+cmake --build .
 echo "Compiled!"

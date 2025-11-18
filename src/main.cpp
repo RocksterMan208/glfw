@@ -1,7 +1,7 @@
 // definitions
 
 #include "glad/glad.h"
-//#include "../include/shader.hpp"
+#include "../include/shader.hpp"
 
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -35,12 +35,12 @@ int main(){
         glfwTerminate();
         return -1;
     }
-/*
+
     GLuint shader = createShaderProgram(
     "../shaders/vertex_shader.glsl",
     "../shaders/fragment_shader.glsl"
     );
-*/
+
     glClearColor(0.0f, 0.5f, 0.5f, 1.0f);
 
     while (!glfwWindowShouldClose(window)){ // Loops window events until closed.
