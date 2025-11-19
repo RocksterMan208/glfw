@@ -4,7 +4,8 @@
 #include <iostream>
 #include <sstream>
 
-std::string loadShaderSource(const char* filePath){
+std::string loadShaderSource(const char* filePath)
+{
 
     std::ifstream file(filePath);
     std::stringstream buffer;

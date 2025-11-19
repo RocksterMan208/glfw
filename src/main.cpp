@@ -19,15 +19,18 @@
 
 // main program
 
-int main(){
-    if (!glfwInit()){
+int main()
+{
+    if (!glfwInit())
+    {
         std::cout << "Initialisation of GLFW failed." << std::endl; // Initialising and testing GLFW.
     }
 
     // window create
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "First Window", NULL, NULL); // Creating the environment
-    if (!window){
+    if (!window)
+    {
         std::cout << "Creation of the window has failed." << std::endl; // Weird ahh print statement
         glfwTerminate();
         return -1;
@@ -38,20 +41,22 @@ int main(){
 
     // glad initialisation
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){ // If statement to initialise and check glad
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    { // If statement to initialise and check glad
         std::cout << "Failed to initialise GLAD" << std::endl;
         glfwTerminate();
         return -1;
     }
 
     GLuint shader = createShaderProgram(
-    "../shaders/vertex_shader.glsl",
+    "../shaders/vertex_shaders.glsl",
     "../shaders/fragment_shader.glsl"
     );
 
     glClearColor(0.0f, 0.5f, 0.5f, 1.0f);
 
-    while (!glfwWindowShouldClose(window)){ // Loops window events until closed.
+    while (!glfwWindowShouldClose(window))
+    { // Loops window events until closed.
         
         glClear(GL_COLOR_BUFFER_BIT); // Clears the current screen to render next frame.
         glfwSwapBuffers(window); // Basically re-renders the frame.
