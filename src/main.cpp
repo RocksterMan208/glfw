@@ -11,6 +11,14 @@
 
 // main program
 
+#include "../include/shader.hpp"
+
+#include <fstream>
+#include <iostream>
+#include <sstream>
+
+// main program
+
 int main(){
     if (!glfwInit()){
         std::cout << "Initialisation of GLFW failed." << std::endl; // Initialising and testing GLFW.

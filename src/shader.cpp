@@ -41,7 +41,7 @@ GLuint compileShader(const char* filePath, GLenum shaderType)
     return shader;
 }
 
-GLuint CreateShadeProgram(const char* vertexPath, const char* fragmentPath)
+GLuint createShaderProgram(const char* vertexPath, const char* fragmentPath)
 {
     GLuint v = compileShader(vertexPath, GL_VERTEX_SHADER);
     GLuint f = compileShader(fragmentPath, GL_FRAGMENT_SHADER);

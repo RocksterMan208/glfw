@@ -1,5 +1,6 @@
-cmake_minimum_required(VERSION 3.16)
-project(OpenGLProject LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.10)
+
+project(DEA LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,16 +18,15 @@ set(SOURCES
     external/glad/src/glad.c
 )
 
-# ---- Create executable ----
-add_executable(opengl_app ${SOURCES})
+# ---- Build executable ----
+add_executable(fuckass ${SOURCES})
 
-# ---- Link system libraries (Arch Linux) ----
-find_package(glfw3 REQUIRED)
-target_link_libraries(opengl_app
-    glfw
-    dl       # glad needs this on Linux
-    GL       # OpenGL on Linux
+# ---- Link libraries (Arch Linux) ----
+target_link_libraries(fuckass
+    glfw      # the GLFW system library
+    GL        # OpenGL
+    dl        # needed by glad
 )
 
-# ---- Copy shaders to build directory for runtime ----
+# ---- Copy shaders for runtime ----
 file(COPY shaders DESTINATION ${CMAKE_BINARY_DIR})
