@@ -1,7 +1,7 @@
 // definitions
 
 #include "glad/glad.h"
-#include "../include/shader.hpp"
+#include "shader.hpp"
 
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -10,8 +10,6 @@
 #include <string>
 
 // main program
-
-#include "../include/shader.hpp"
 
 #include <fstream>
 #include <iostream>
@@ -48,10 +46,7 @@ int main()
         return -1;
     }
 
-    GLuint shader = createShaderProgram(
-    "../shaders/vertex_shaders.glsl",
-    "../shaders/fragment_shader.glsl"
-    );
+    Shader shader("shaders/vertex_shader.glsl","shaders/fragment_shader.glsl");
 
     glClearColor(0.0f, 0.5f, 0.5f, 1.0f);
 
