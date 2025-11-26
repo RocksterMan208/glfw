@@ -5,7 +5,7 @@ SRC_DIR := src
 INCLUDE_DIR := include
 GLAD_DIR := external/glad
 BUILD_DIR := build
-TARGET := NEA
+TARGET := fuckass
 
 # Grab all .cpp files recursively
 SOURCES := $(shell find $(SRC_DIR) -name "*.cpp")
